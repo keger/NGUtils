@@ -10,13 +10,10 @@ import android.widget.BaseAdapter;
 import java.util.List;
 
 /**
- * <p/>
  * <p>Description: </p>
  * <p/>
  * <p>Copyright: Copyright (c) 2015</p>
  * <p/>
- * <p>Company: ucweb.com</p>
- *
  * @author zhouwen
  * @date 2015/4/21.
  */

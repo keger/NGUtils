@@ -16,12 +16,12 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import cn.ninegame.gamemanager.biz.util.UIUtils;
 
 /**
- * <p/> 
  * <p>Description: </p>
- * <p/> 
+ * <p/>
  * <p>Copyright: Copyright (c) 2015</p>
  * <p/>
  * @author zhouwen
+ * @date 2015/4/21.
  */
 public class ViewHolderHelper {
     private SparseArray<View> mSparseArray;
