@@ -30,3 +30,14 @@ dependencies {
     testCompile "junit:junit:4.11"
 }
 */
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
+    }
+}
+
+apply from: 'bintray.gradle'
