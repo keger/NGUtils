@@ -18,7 +18,7 @@ import cn.ninegame.gamemanager.biz.util.UIUtils;
 /**
  * <p/> 
  * <p>Description: </p>
- * <p/>
+ * <p/> 
  * <p>Copyright: Copyright (c) 2015</p>
  * <p/>
  * @author zhouwen
