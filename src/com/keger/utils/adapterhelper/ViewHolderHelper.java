@@ -16,7 +16,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import cn.ninegame.gamemanager.biz.util.UIUtils;
 
 /**
- * <p/>
+ * <p/> 
  * <p>Description: </p>
  * <p/>
  * <p>Copyright: Copyright (c) 2015</p>
