@@ -11,4 +11,4 @@
   > * Task 队列；
   
   * adapter：
-  > * 通用adapter；
+  > * 通用adapter适配器；
