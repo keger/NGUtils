@@ -11,4 +11,4 @@
   > * Task 队列；
   
   * adapter：
-  > * 万能adapter；
+  > * 通用adapter；
