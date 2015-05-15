@@ -9,3 +9,6 @@
 
 * Task工具：
   > * Task 队列；
+  
+  * adapter：
+  > * 万能adapter；
