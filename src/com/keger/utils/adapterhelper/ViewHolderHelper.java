@@ -1,8 +1,7 @@
-package cn.ninegame.guild.biz.common.adapter;
+package com.keger.utils.adapterhelper;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,9 +10,6 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.nostra13.universalimageloader.core.ImageLoader;
-
-import cn.ninegame.gamemanager.biz.util.UIUtils;
 
 /**
  * <p>Description: </p>
@@ -41,14 +37,14 @@ public class ViewHolderHelper {
         return mConvertView;
     }
 
-    public static ViewHolderHelper getViewHolder(@NonNull Context context, int position, int itemViewRes, View convertView, ViewGroup parent) {
+    public static ViewHolderHelper getViewHolder(Context context, int position, int itemViewRes, View convertView, ViewGroup parent) {
         if (convertView == null) {
             return new ViewHolderHelper(context, itemViewRes, convertView, parent, position);
         }
         return (ViewHolderHelper) convertView.getTag();
     }
 
-    public <T extends View> T getItemView(@NonNull int id) {
+    public <T extends View> T getItemView(int id) {
         View view = mSparseArray.get(id);
         if (view == null) {
             view = mConvertView.findViewById(id);
@@ -57,7 +53,7 @@ public class ViewHolderHelper {
         return (T) view;
     }
 
-    public ViewHolderHelper setText(int viewIdRes, @NonNull CharSequence text) {
+    public ViewHolderHelper setText(int viewIdRes, CharSequence text) {
         TextView textView = getItemView(viewIdRes);
         textView.setText(text);
         return this;
@@ -71,7 +67,7 @@ public class ViewHolderHelper {
 
     public ViewHolderHelper setImageViewResUrl(int viewIdRes, String imageUrl) {
         ImageView imageView = getItemView(viewIdRes);
-        ImageLoader.getInstance().displayImage(imageUrl, imageView, UIUtils.getDefaultIconOptions());
+//        ImageLoader.getInstance().displayImage(imageUrl, imageView, UIUtils.getDefaultIconOptions());
         return this;
     }
 

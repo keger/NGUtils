@@ -1,90 +1,103 @@
-group = PROJ_GROUP
-version = PROJ_VERSION
-
-
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-apply plugin: 'maven-publish'
+
+// 提交到仓库中的版本号
+version = ANDROID_GRADLE_PLUGIN_VERSION
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+    }
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:21.+'
+}
+
+def siteUrl = PROJ_WEBSITEURL      // 项目的主页
+def gitUrl = PROJ_VCSURL   // Git仓库的url
+group = PROJ_GROUP
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                name PROJ_DESCRIPTION    //项目描述
+                url siteUrl
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id DEVELOPER_ID
+                        name DEVELOPER_NAME
+                        email DEVELOPER_EMAIL
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
 
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
 }
-
 task javadoc(type: Javadoc) {
     source = android.sourceSets.main.java.srcDirs
-    classpath += configurations.compile
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
 }
-
 task javadocJar(type: Jar, dependsOn: javadoc) {
     classifier = 'javadoc'
     from javadoc.destinationDir
 }
-
-javadoc {
-    options{
-        encoding "UTF-8"
-        charSet 'UTF-8'
-        author true
-        version true
-        links "http://docs.oracle.com/javase/7/docs/api"
-    }
-}
-
 artifacts {
     archives javadocJar
     archives sourcesJar
 }
 
-def pomConfig = {
-    licenses {
-        license {
-            name "The Apache Software License, Version 2.0"
-            url "http://www.apache.org/licenses/LICENSE-2.0.txt"
-            distribution "repo"
-        }
-    }
-    developers {
-        developer {
-            id DEVELOPER_ID
-            name DEVELOPER_NAME
-            email DEVELOPER_EMAIL
-        }
-    }
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifactId PROJ_ARTIFACTID
-
-            pom{
-                packaging 'aar'
-            }
-            pom.withXml {
-                def root = asNode()
-                root.appendNode('description', PROJ_DESCRIPTION)
-                root.children().last() + pomConfig
-            }
-        }
-    }
-}
-
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
 bintray {
-    user = BINTRAY_USER
-    key = BINTRAY_KEY
-
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
     configurations = ['archives']
-    publications = ['mavenJava']
-    publish = true
-
     pkg {
-        repo = 'maven'
-        name = PROJ_NAME
-        desc = PROJ_DESCRIPTION
-        websiteUrl = PROJ_WEBSITEURL
-        issueTrackerUrl = PROJ_ISSUETRACKERURL
-        vcsUrl = PROJ_VCSURL
-        licenses = ['Apache-2.0']
-        publicDownloadNumbers = true
+        repo = "maven"
+        name = "NGUtils"    //发布到JCenter上的项目名字
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
     }
 }

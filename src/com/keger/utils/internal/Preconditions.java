@@ -1,8 +1,6 @@
 package com.keger.utils.internal;
 
 import android.os.Looper;
-import android.support.annotation.Nullable;
-
 /**
  * <p>Description: </p>
  * <p/>
@@ -20,15 +18,15 @@ public final class Preconditions {
         }
     }
 
-    public static void checkArgument(boolean expression, @Nullable Object errorMessage) {
+    public static void checkArgument(boolean expression, Object errorMessage) {
         if (!expression) {
             throw new IllegalArgumentException(String.valueOf(errorMessage));
         }
     }
 
     public static void checkArgument(boolean expression,
-                                     @Nullable String errorMessageTemplate,
-                                     @Nullable Object... errorMessageArgs) {
+                                     String errorMessageTemplate,
+                                     Object... errorMessageArgs) {
         if (!expression) {
             throw new IllegalArgumentException(format(errorMessageTemplate, errorMessageArgs));
         }
@@ -40,15 +38,15 @@ public final class Preconditions {
         }
     }
 
-    public static void checkState(boolean expression, @Nullable Object errorMessage) {
+    public static void checkState(boolean expression,  Object errorMessage) {
         if (!expression) {
             throw new IllegalStateException(String.valueOf(errorMessage));
         }
     }
 
     public static void checkState(boolean expression,
-                                  @Nullable String errorMessageTemplate,
-                                  @Nullable Object... errorMessageArgs) {
+                                   String errorMessageTemplate,
+                                   Object... errorMessageArgs) {
         if (!expression) {
             throw new IllegalStateException(format(errorMessageTemplate, errorMessageArgs));
         }
@@ -61,7 +59,7 @@ public final class Preconditions {
         return reference;
     }
 
-    public static <T> T checkNotNull(T reference, @Nullable Object errorMessage) {
+    public static <T> T checkNotNull(T reference,  Object errorMessage) {
         if (reference == null) {
             throw new NullPointerException(String.valueOf(errorMessage));
         }
@@ -69,8 +67,8 @@ public final class Preconditions {
     }
 
     public static <T> T checkNotNull(T reference,
-                                     @Nullable String errorMessageTemplate,
-                                     @Nullable Object... errorMessageArgs) {
+                                      String errorMessageTemplate,
+                                      Object... errorMessageArgs) {
         if (reference == null) {
             // If either of these parameters is null, the right thing happens anyway
             throw new NullPointerException(format(errorMessageTemplate, errorMessageArgs));
@@ -90,7 +88,7 @@ public final class Preconditions {
     }
 
     public static int checkElementIndex(
-            int index, int size, @Nullable String desc) {
+            int index, int size,  String desc) {
         // Carefully optimized for execution by hotspot (explanatory comment above)
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException(badElementIndex(index, size, desc));
@@ -112,7 +110,7 @@ public final class Preconditions {
         return checkPositionIndex(index, size, "index");
     }
 
-    public static int checkPositionIndex(int index, int size, @Nullable String desc) {
+    public static int checkPositionIndex(int index, int size,  String desc) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException(badPositionIndex(index, size, desc));
         }
@@ -148,7 +146,7 @@ public final class Preconditions {
     }
 
     // Note that this is somewhat-improperly used from Verify.java as well.
-    static String format(String template, @Nullable Object... args) {
+    static String format(String template,  Object... args) {
         template = String.valueOf(template); // null -> "null"
 
         // start substituting the arguments into the '%s' placeholders

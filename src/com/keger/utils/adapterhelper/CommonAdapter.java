@@ -1,8 +1,6 @@
-package cn.ninegame.guild.biz.common.adapter;
+package com.keger.utils.adapterhelper;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -20,11 +18,11 @@ import java.util.List;
 
 public abstract class CommonAdapter<T> extends BaseAdapter {
 
-    public @Nullable List<T> mDataList = null;
+    public List<T> mDataList = null;
     public Context mContext;
     private int mItemRes;
 
-    public CommonAdapter(Context context, @Nullable List<T> data, int itemViewRes) {
+    public CommonAdapter(Context context,  List<T> data, int itemViewRes) {
         mContext = context;
         mDataList = data;
         mItemRes = itemViewRes;
@@ -108,5 +106,5 @@ public abstract class CommonAdapter<T> extends BaseAdapter {
         notifyDataSetChanged();
     }
 
-    protected abstract void buildItemView(ViewHolderHelper viewHolder, @NonNull T item,int position);
+    protected abstract void buildItemView(ViewHolderHelper viewHolder, T item,int position);
 }

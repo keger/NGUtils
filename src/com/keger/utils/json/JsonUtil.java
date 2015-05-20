@@ -1,6 +1,5 @@
 package com.keger.utils.json;
 
-import android.annotation.SuppressLint;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -17,7 +16,6 @@ import java.util.*;
 public class JsonUtil {
 
     static void jsonObjectClear(JSONObject jsonObject) {
-        @SuppressWarnings("unchecked")
         Iterator<String> keys = (Iterator<String>) jsonObject.keys();
         while (keys.hasNext()) {
             keys.next();
@@ -46,7 +44,6 @@ public class JsonUtil {
             this.value = value;
         }
 
-        @SuppressLint("FieldGetter")
         @Override
         public String getKey() {
             return this.key;
