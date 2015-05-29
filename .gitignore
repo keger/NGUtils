@@ -1,6 +1,8 @@
 bin/
 gen/
 .gradle
+buck-out
+.buckd
 .DS_Store
 .idea
 build/

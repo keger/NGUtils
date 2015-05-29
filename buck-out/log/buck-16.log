@@ -1,0 +1,111 @@
+[2015-05-20 22:07:56.786][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.cli.Main] Starting up (build date 2015-04-14 05:47:36 +0800, rev bf0e5a4564171977c36376f1e66dd9bf2b037c65), args: [build, debug]
+[2015-05-20 22:07:56.793][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.io.ExecutableFinder] Executable 'python2' mapped to 'Optional.absent()'
+[2015-05-20 22:07:56.794][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.io.ExecutableFinder] Executable 'python' mapped to 'Optional.of(/usr/bin/python)'
+[2015-05-20 22:07:56.816][warn ][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.rules.KnownBuildRuleTypes] Couldn't find version file at /Library/Developer/version.plist (Apple platforms will be unavailable)
+[2015-05-20 22:07:56.818][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.io.ExecutableFinder] Executable 'python2' mapped to 'Optional.absent()'
+[2015-05-20 22:07:56.818][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.io.ExecutableFinder] Executable 'python' mapped to 'Optional.of(/usr/bin/python)'
+[2015-05-20 22:07:56.819][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.io.ExecutableFinder] Executable 'python2' mapped to 'Optional.absent()'
+[2015-05-20 22:07:56.820][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.io.ExecutableFinder] Executable 'python' mapped to 'Optional.of(/usr/bin/python)'
+[2015-05-20 22:07:56.820][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.event.listener.SuperConsoleEventBusListener] Starting render scheduler (interval 100 ms)
+[2015-05-20 22:07:56.822][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.util.WatchmanWatcher] Starting watchman command: [watchman, --server-encoding=json, --no-pretty, -j]
+[2015-05-20 22:07:56.822][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:114][com.facebook.buck.event.listener.LoggingBuildListener] CommandStarted(build, isDaemon: true)
+[2015-05-20 22:07:56.826][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.util.WatchmanWatcher] Writing query to Watchman: ["query","/Users/keger/Documents/workspace/NGUtils",{"since":"n:buckd498c26e2-42e9-4cf5-8fbe-f2a5c1eb75fc","expression":["not",["anyof",["type","d"],["match","buck-out/*","wholename"],["match",".idea/*","wholename"],["match","/Users/keger/Documents/workspace/NGUtils/.buckd/*","wholename"],["match","/Users/keger/Documents/workspace/NGUtils/buck-cache/*","wholename"],["match","*.pbxproj","wholename"],["match","*.xcscheme","wholename"],["match","*.xcworkspacedata","wholename"]]],"empty_on_fresh_instance":true,"fields":["name","exists","new"]}]
+[2015-05-20 22:07:56.826][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.util.WatchmanWatcher] Parsing JSON output from Watchman
+[2015-05-20 22:07:56.845][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Parsed build files does not contain /Users/keger/Documents/workspace/NGUtils/.buckd/buckd.runcount, not invalidating
+[2015-05-20 22:07:56.846][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Removing targets [] for path /Users/keger/Documents/workspace/NGUtils/.buckd/buckd.runcount
+[2015-05-20 22:07:56.847][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Parser invalidating /Users/keger/Documents/workspace/NGUtils/BUCK cache
+[2015-05-20 22:07:56.848][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Removing targets [//:debug, //:res, //:build_config, //:src] for path /Users/keger/Documents/workspace/NGUtils/BUCK
+[2015-05-20 22:07:56.848][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Parsed build files does not contain /Users/keger/Documents/workspace/NGUtils/.git/index.lock, not invalidating
+[2015-05-20 22:07:56.848][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Removing targets [] for path /Users/keger/Documents/workspace/NGUtils/.git/index.lock
+[2015-05-20 22:07:56.849][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Parsed build files does not contain /Users/keger/Documents/workspace/NGUtils/BUCK, not invalidating
+[2015-05-20 22:07:56.849][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Removing targets [] for path /Users/keger/Documents/workspace/NGUtils/BUCK
+[2015-05-20 22:07:56.851][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Parsed build files does not contain /Users/keger/Documents/workspace/NGUtils/BUCK, not invalidating
+[2015-05-20 22:07:56.852][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Removing targets [] for path /Users/keger/Documents/workspace/NGUtils/BUCK
+[2015-05-20 22:07:56.852][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Parsed build files does not contain /Users/keger/Documents/workspace/NGUtils/keystore/debug.keystore, not invalidating
+[2015-05-20 22:07:56.852][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Removing targets [] for path /Users/keger/Documents/workspace/NGUtils/keystore/debug.keystore
+[2015-05-20 22:07:56.853][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Parsed build files does not contain /Users/keger/Documents/workspace/NGUtils/BUCK, not invalidating
+[2015-05-20 22:07:56.854][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Removing targets [] for path /Users/keger/Documents/workspace/NGUtils/BUCK
+[2015-05-20 22:07:56.854][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Parsed build files does not contain /Users/keger/Documents/workspace/NGUtils/.buckd/tmp/buck_run.L78kap/buck5442411576981694869.py, not invalidating
+[2015-05-20 22:07:56.854][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Removing targets [] for path /Users/keger/Documents/workspace/NGUtils/.buckd/tmp/buck_run.L78kap/buck5442411576981694869.py
+[2015-05-20 22:07:56.854][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.util.WatchmanWatcher] Posted 5 Watchman events. Waiting for subprocess to exit...
+[2015-05-20 22:07:56.854][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.util.WatchmanWatcher] Watchman exited cleanly.
+[2015-05-20 22:07:56.859][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:114][com.facebook.buck.event.listener.LoggingBuildListener] ArtifactCacheConnectStarted()
+[2015-05-20 22:07:56.931][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:114][com.facebook.buck.event.listener.LoggingBuildListener] ArtifactCacheConnectFinished()
+[2015-05-20 22:07:56.932][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.parser.Parser] Parsing BUCK file: /Users/keger/Documents/workspace/NGUtils/BUCK
+[2015-05-20 22:07:56.932][info ][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:114][com.facebook.buck.event.listener.LoggingBuildListener] Build started at 2015-05-20 22:07:56.822
+[2015-05-20 22:07:56.932][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:114][com.facebook.buck.event.listener.LoggingBuildListener] BuckFilesParseStarted()
+[2015-05-20 22:07:56.933][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.io.ExecutableFinder] Executable 'python2' mapped to 'Optional.absent()'
+[2015-05-20 22:07:56.933][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.io.ExecutableFinder] Executable 'python' mapped to 'Optional.of(/usr/bin/python)'
+[2015-05-20 22:07:56.933][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Creating temporary buck.py instance...
+[2015-05-20 22:07:56.945][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Created temporary buck.py instance at /Users/keger/Documents/workspace/NGUtils/.buckd/tmp/buck_run.L78kap/buck8830222896386764903.py.
+[2015-05-20 22:07:56.945][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Starting buck.py command: [/usr/bin/python, -u, /Users/keger/Documents/workspace/NGUtils/.buckd/tmp/buck_run.L78kap/buck8830222896386764903.py, --allow_empty_globs, --project_root, /Users/keger/Documents/workspace/NGUtils, --build_file_name, BUCK] environment: {PATH=/Users/keger/.jenv/shims:/Users/keger/.jenv/bin:/Users/keger/.jenv/shims:/Users/keger/.jenv/bin:/Users/keger/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/keger/.gvm/vertx/current/bin:/Users/keger/.gvm/springboot/current/bin:/Users/keger/.gvm/lazybones/current/bin:/Users/keger/.gvm/jbake/current/bin:/Users/keger/.gvm/groovyserv/current/bin:/Users/keger/.gvm/groovy/current/bin:/Users/keger/.gvm/griffon/current/bin:/Users/keger/.gvm/grails/current/bin:/Users/keger/.gvm/gradle/current/bin:/Users/keger/.gvm/glide/current/bin:/Users/keger/.gvm/gaiden/current/bin:/Users/keger/.gvm/crash/current/bin:/Users/keger/.gvm/asciidoctorj/current/bin:/Users/keger/bin:/Users/keger/Documents/android-sdk-macosx/tools:/Users/keger/Documents/android-sdk-macosx/platform-tools:/Users/keger/Documents/android-sdk-macosx/tools:/Users/keger/Documents/android-sdk-macosx/platform-tools:/usr/local/bin:/Users/keger/bin, GRAILS_HOME=/Users/keger/.gvm/grails/current, ASCIIDOCTORJ_HOME=/Users/keger/.gvm/asciidoctorj/current, VERTX_HOME=/Users/keger/.gvm/vertx/current, JENV_VERSION=oracle64-1.8.0.45, LOGNAME=keger, PWD=/Users/keger/Documents/workspace/NGUtils, TERM_PROGRAM_VERSION=343.7, SPRINGBOOT_HOME=/Users/keger/.gvm/springboot/current, PYTHONPATH=/Users/keger/Documents/buck/third-party/py/pathlib, SHELL=/bin/bash, GROOVYSERV_HOME=/Users/keger/.gvm/groovyserv/current, GVM_PLATFORM=Darwin, VERSIONER_PYTHON_PREFER_32_BIT=no, TMPDIR=/var/folders/rz/3xhpytv543gg8f5p8l382jhw0000gn/T/, XPC_FLAGS=0x0, __CF_USER_TEXT_ENCODING=0x1F5:0x19:0x34, CRASH_HOME=/Users/keger/.gvm/crash/current, Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.JSMkSCNxYT/Render, SHLVL=1, GVM_BROADCAST_SERVICE=http://cast.gvm.io, GRIFFON_HOME=/Users/keger/.gvm/griffon/current, NAILGUN_TTY_2=1, NAILGUN_TTY_1=1, NAILGUN_TTY_0=1, GVM_VERSION=2.4.1, LAZYBONES_HOME=/Users/keger/.gvm/lazybones/current, GAIDEN_HOME=/Users/keger/.gvm/gaiden/current, TERM=xterm-256color, NAILGUN_FILESEPARATOR=/, LANG=zh_CN.UTF-8, GRADLE_HOME=/Users/keger/.gvm/gradle/current, GROOVY_HOME=/Users/keger/.gvm/groovy/current, VERSIONER_PYTHON_VERSION=2.7, GVM_SERVICE=http://api.gvmtool.net, XPC_SERVICE_NAME=0, NAILGUN_PATHSEPARATOR=:, JBAKE_HOME=/Users/keger/.gvm/jbake/current, TERM_PROGRAM=Apple_Terminal, GVM_DIR=/Users/keger/.gvm, USER=keger, GVM_BROKER_SERVICE=http://release.gvm.io, SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.kdSNEtGnrF/Listeners, GVM_INIT=true, GLIDE_HOME=/Users/keger/.gvm/glide/current, HOME=/Users/keger, JENV_LOADED=1}
+[2015-05-20 22:07:56.947][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Started process java.lang.UNIXProcess@207865bf successfully
+[2015-05-20 22:07:56.948][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Parsing output of process java.lang.UNIXProcess@207865bf...
+[2015-05-20 22:07:57.024][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Parsed 7 rules from process
+[2015-05-20 22:07:57.033][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Waiting for process java.lang.UNIXProcess@207865bf to exit...
+[2015-05-20 22:07:57.034][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Process java.lang.UNIXProcess@207865bf exited cleanly.
+[2015-05-20 22:07:57.034][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:114][com.facebook.buck.event.listener.LoggingBuildListener] BuckFilesParseFinished()
+[2015-05-20 22:07:57.034][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.event.listener.SuperConsoleEventBusListener] Stopping render scheduler
+[2015-05-20 22:07:57.035][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.cli.Main] Failing build on exception.
+com.facebook.buck.util.HumanReadableException: //:debug_keystore: parameter 'properties': no such file or directory 'keystore/debug.keystore.properties'
+	at com.facebook.buck.parser.Parser$CachedState.get(Parser.java:1172)
+	at com.facebook.buck.parser.Parser.getTargetNode(Parser.java:430)
+	at com.facebook.buck.parser.Parser.resolveTargetSpec(Parser.java:326)
+	at com.facebook.buck.parser.Parser.resolveTargetSpecs(Parser.java:348)
+	at com.facebook.buck.parser.Parser.buildTargetGraphForTargetNodeSpecs(Parser.java:382)
+	at com.facebook.buck.parser.Parser.buildTargetGraphForBuildTargets(Parser.java:416)
+	at com.facebook.buck.cli.BuildCommand.runCommandWithOptionsInternal(BuildCommand.java:99)
+	at com.facebook.buck.cli.BuildCommand.runCommandWithOptionsInternal(BuildCommand.java:1)
+	at com.facebook.buck.cli.AbstractCommandRunner.runCommandWithOptions(AbstractCommandRunner.java:136)
+	at com.facebook.buck.cli.AbstractCommandRunner.runCommand(AbstractCommandRunner.java:108)
+	at com.facebook.buck.cli.Command.execute(Command.java:126)
+	at com.facebook.buck.cli.Main.executeCommand(Main.java:637)
+	at com.facebook.buck.cli.Main.runMainWithExitCode(Main.java:452)
+	at com.facebook.buck.cli.Main.tryRunMainWithExitCode(Main.java:966)
+	at com.facebook.buck.cli.Main.runMainThenExit(Main.java:1023)
+	at com.facebook.buck.cli.Main.nailMain(Main.java:1052)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.martiansoftware.nailgun.NGSession.run(NGSession.java:338)
+
+[2015-05-20 22:07:57.036][debug][command:751cdd82-29c8-4b50-b472-b677c43d6779][tid:102][com.facebook.buck.cli.Main] Done.
+[2015-05-20 22:07:57.036][debug][command:null][tid:102][class com.martiansoftware.nailgun.NGSession] Nail finished.
+[2015-05-20 22:07:57.036][error][command:null][tid:102][class com.martiansoftware.nailgun.NGSession] Caught NGExitException, cleaning up session and writing exit command to client.
+com.martiansoftware.nailgun.NGExitException: ExitException: status 1
+	at com.martiansoftware.nailgun.NGSecurityManager.checkExit(NGSecurityManager.java:56)
+	at java.lang.Runtime.exit(Runtime.java:107)
+	at java.lang.System.exit(System.java:971)
+	at com.facebook.buck.cli.Main.runMainThenExit(Main.java:1036)
+	at com.facebook.buck.cli.Main.nailMain(Main.java:1052)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.martiansoftware.nailgun.NGSession.run(NGSession.java:338)
+
+[2015-05-20 22:07:57.036][info ][command:null][tid:106][com.facebook.buck.cli.Main] Client disconnected.
+[2015-05-20 22:07:57.037][debug][command:null][tid:106][class com.martiansoftware.nailgun.NGInputStream] notifyClientListener(): interrupting the main thread.
+[2015-05-20 22:07:57.037][debug][command:null][tid:102][class com.martiansoftware.nailgun.NGSession] Closing client streams and socket.
+[2015-05-20 22:08:36.414][debug][command:null][tid:105][class com.martiansoftware.nailgun.NGSession] Received connection from 127.0.0.1
+[2015-05-20 22:08:36.415][debug][command:null][tid:105][class com.martiansoftware.nailgun.NGSession] Working directory: /Users/keger/Documents/workspace/NGUtils
+[2015-05-20 22:08:36.415][debug][command:null][tid:105][class com.martiansoftware.nailgun.NGSession] Received command: ng-stats
+[2015-05-20 22:08:36.415][debug][command:null][tid:105][class com.martiansoftware.nailgun.NGSession] Invoking main method: public static void com.martiansoftware.nailgun.builtins.NGServerStats.nailMain(com.martiansoftware.nailgun.NGContext)
+[2015-05-20 22:08:36.416][debug][command:null][tid:105][class com.martiansoftware.nailgun.NGSession] Nail finished.
+[2015-05-20 22:08:36.416][debug][command:null][tid:105][class com.martiansoftware.nailgun.NGSession] Writing exit command with successful status 0 to client.
+[2015-05-20 22:08:36.416][debug][command:null][tid:105][class com.martiansoftware.nailgun.NGSession] Closing client streams and socket.
+[2015-05-20 22:08:36.422][debug][command:null][tid:121][class com.martiansoftware.nailgun.NGSession] Received connection from 127.0.0.1
+[2015-05-20 22:08:36.423][debug][command:null][tid:121][class com.martiansoftware.nailgun.NGSession] Working directory: /Users/keger/Documents/workspace/NGUtils
+[2015-05-20 22:08:36.423][debug][command:null][tid:121][class com.martiansoftware.nailgun.NGSession] Received command: ng-stats
+[2015-05-20 22:08:36.424][debug][command:null][tid:121][class com.martiansoftware.nailgun.NGSession] Invoking main method: public static void com.martiansoftware.nailgun.builtins.NGServerStats.nailMain(com.martiansoftware.nailgun.NGContext)
+[2015-05-20 22:08:36.425][debug][command:null][tid:121][class com.martiansoftware.nailgun.NGSession] Nail finished.
+[2015-05-20 22:08:36.426][debug][command:null][tid:121][class com.martiansoftware.nailgun.NGSession] Writing exit command with successful status 0 to client.
+[2015-05-20 22:08:36.426][debug][command:null][tid:121][class com.martiansoftware.nailgun.NGSession] Closing client streams and socket.
+[2015-05-20 22:08:36.436][debug][command:null][tid:124][class com.martiansoftware.nailgun.NGSession] Received connection from 127.0.0.1
+[2015-05-20 22:08:36.436][debug][command:null][tid:124][class com.martiansoftware.nailgun.NGSession] Received command line argument: build
+[2015-05-20 22:08:36.436][debug][command:null][tid:124][class com.martiansoftware.nailgun.NGSession] Received command line argument: debug
+[2015-05-20 22:08:36.437][debug][command:null][tid:124][class com.martiansoftware.nailgun.NGSession] Working directory: /Users/keger/Documents/workspace/NGUtils
+[2015-05-20 22:08:36.437][debug][command:null][tid:124][class com.martiansoftware.nailgun.NGSession] Received command: com.facebook.buck.cli.Main
+[2015-05-20 22:08:36.437][debug][command:null][tid:124][class com.martiansoftware.nailgun.NGSession] Invoking main method: public static void com.facebook.buck.cli.Main.nailMain(com.martiansoftware.nailgun.NGContext) throws java.lang.InterruptedException
+[2015-05-20 22:08:36.437][debug][command:a22f4e69-acee-499b-82fa-41c5de854d9f][tid:124][com.facebook.buck.cli.Main] Rotating log.

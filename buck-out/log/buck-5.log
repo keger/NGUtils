@@ -1,0 +1,38 @@
+[2015-05-22 13:47:31.356][debug][command:6c3cb74f-f245-4271-8e89-edcf60ffe763][tid:36][com.facebook.buck.cli.Main] Starting up (build date 2015-05-21 23:42:48 +0800, rev b7030deb681193b4c531dca892f9f10ed6e42cf2), args: []
+[2015-05-22 13:47:31.368][debug][command:6c3cb74f-f245-4271-8e89-edcf60ffe763][tid:36][com.facebook.buck.cli.Main] Done.
+[2015-05-22 13:47:31.368][debug][command:null][tid:36][class com.martiansoftware.nailgun.NGSession] Nail finished.
+[2015-05-22 13:47:31.368][error][command:null][tid:36][class com.martiansoftware.nailgun.NGSession] Caught NGExitException, cleaning up session and writing exit command to client.
+com.martiansoftware.nailgun.NGExitException: ExitException: status 1
+	at com.martiansoftware.nailgun.NGSecurityManager.checkExit(NGSecurityManager.java:56)
+	at java.lang.Runtime.exit(Runtime.java:107)
+	at java.lang.System.exit(System.java:971)
+	at com.facebook.buck.cli.Main.runMainThenExit(Main.java:1036)
+	at com.facebook.buck.cli.Main.nailMain(Main.java:1052)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.martiansoftware.nailgun.NGSession.run(NGSession.java:338)
+
+[2015-05-22 13:47:31.369][debug][command:null][tid:36][class com.martiansoftware.nailgun.NGSession] Closing client streams and socket.
+[2015-05-22 13:48:03.644][debug][command:null][tid:39][class com.martiansoftware.nailgun.NGSession] Received connection from 127.0.0.1
+[2015-05-22 13:48:03.646][debug][command:null][tid:39][class com.martiansoftware.nailgun.NGSession] Working directory: /Users/keger/Documents/workspace/NGUtils
+[2015-05-22 13:48:03.646][debug][command:null][tid:39][class com.martiansoftware.nailgun.NGSession] Received command: ng-stats
+[2015-05-22 13:48:03.646][debug][command:null][tid:39][class com.martiansoftware.nailgun.NGSession] Invoking main method: public static void com.martiansoftware.nailgun.builtins.NGServerStats.nailMain(com.martiansoftware.nailgun.NGContext)
+[2015-05-22 13:48:03.646][debug][command:null][tid:39][class com.martiansoftware.nailgun.NGSession] Nail finished.
+[2015-05-22 13:48:03.647][debug][command:null][tid:39][class com.martiansoftware.nailgun.NGSession] Writing exit command with successful status 0 to client.
+[2015-05-22 13:48:03.647][debug][command:null][tid:39][class com.martiansoftware.nailgun.NGSession] Closing client streams and socket.
+[2015-05-22 13:48:03.651][debug][command:null][tid:42][class com.martiansoftware.nailgun.NGSession] Received connection from 127.0.0.1
+[2015-05-22 13:48:03.652][debug][command:null][tid:42][class com.martiansoftware.nailgun.NGSession] Working directory: /Users/keger/Documents/workspace/NGUtils
+[2015-05-22 13:48:03.652][debug][command:null][tid:42][class com.martiansoftware.nailgun.NGSession] Received command: ng-stats
+[2015-05-22 13:48:03.653][debug][command:null][tid:42][class com.martiansoftware.nailgun.NGSession] Invoking main method: public static void com.martiansoftware.nailgun.builtins.NGServerStats.nailMain(com.martiansoftware.nailgun.NGContext)
+[2015-05-22 13:48:03.653][debug][command:null][tid:42][class com.martiansoftware.nailgun.NGSession] Nail finished.
+[2015-05-22 13:48:03.653][debug][command:null][tid:42][class com.martiansoftware.nailgun.NGSession] Writing exit command with successful status 0 to client.
+[2015-05-22 13:48:03.653][debug][command:null][tid:42][class com.martiansoftware.nailgun.NGSession] Closing client streams and socket.
+[2015-05-22 13:48:03.662][debug][command:null][tid:45][class com.martiansoftware.nailgun.NGSession] Received connection from 127.0.0.1
+[2015-05-22 13:48:03.663][debug][command:null][tid:45][class com.martiansoftware.nailgun.NGSession] Received command line argument: build
+[2015-05-22 13:48:03.663][debug][command:null][tid:45][class com.martiansoftware.nailgun.NGSession] Received command line argument: debug
+[2015-05-22 13:48:03.664][debug][command:null][tid:45][class com.martiansoftware.nailgun.NGSession] Working directory: /Users/keger/Documents/workspace/NGUtils
+[2015-05-22 13:48:03.664][debug][command:null][tid:45][class com.martiansoftware.nailgun.NGSession] Received command: com.facebook.buck.cli.Main
+[2015-05-22 13:48:03.665][debug][command:null][tid:45][class com.martiansoftware.nailgun.NGSession] Invoking main method: public static void com.facebook.buck.cli.Main.nailMain(com.martiansoftware.nailgun.NGContext) throws java.lang.InterruptedException
+[2015-05-22 13:48:03.666][debug][command:c464ca67-9a47-4bbe-8ed8-ee30438ec963][tid:45][com.facebook.buck.cli.Main] Rotating log.
